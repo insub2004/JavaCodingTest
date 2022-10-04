@@ -1,6 +1,7 @@
+package com.part01;
 import java.util.Scanner;
 
-public class Test01 {
+public class YutGame {
 
 	public static void main(String[] args) {
 
