@@ -1,4 +1,4 @@
-package com.part02;
+package com.part03;
 
 import java.util.Scanner;
 

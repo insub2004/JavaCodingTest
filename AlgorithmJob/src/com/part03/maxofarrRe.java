@@ -1,4 +1,4 @@
-package com.part02;
+package com.part03;
 
 import java.util.Scanner;
 
@@ -19,7 +19,6 @@ public class maxofarrRe {
 			첫째 줄에 최댓값을 출력하고, 둘째 줄에 최댓값이 위치한 행 번호와 열 번호를 빈칸을 사이에 두고 차례로 출력한다. 
 			최댓값이 두 개 이상인 경우 그 중 행의 번호가 가장 작은 곳의 위치를 출력한다. 
 			행 번호도 같은 곳이 여러개일 경우에는 열 번호가 가장 작은 곳의 위치를 출력한다.
-
 		 */
 		
 		Scanner sc = new Scanner(System.in);
@@ -41,13 +40,16 @@ public class maxofarrRe {
 		for(int i=0; i<9; i++) {
 			for(int j=0; j<9; j++) {
 				if(arr[i][j] > max) {
-					x = i;
-					y = j;
+					x = i+1;
+					y = j+1;
 					max = arr[i][j];
+				} else if(arr[i][j] == max) {
+					if(x>i) x=i;
+					else if(i==x && y>j) y=j;
 				}
 			}
 		}
 		
-		System.out.print(max +"\n" + x+1 + " " + y+1);
+		System.out.print(max +"\n" + x + " " + y);
 	}
 }

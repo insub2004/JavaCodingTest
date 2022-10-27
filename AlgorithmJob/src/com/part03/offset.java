@@ -1,8 +1,8 @@
-package com.part02;
+package com.part03;
 
 import java.util.Scanner;
 
-public class offsetRe {
+public class offset {
 
 	public static void main(String[] args){
 		

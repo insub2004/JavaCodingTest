@@ -1,11 +1,11 @@
-package com.part02;
+package com.doit;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class PartArray {
+public class QN03 {
 
 	public static void main(String[] args) throws IOException {
 		

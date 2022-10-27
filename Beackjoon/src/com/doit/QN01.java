@@ -1,8 +1,8 @@
-package com.part02;
+package com.doit;
 
 import java.util.Scanner;
 
-public class TotalNum {
+public class QN01 {
 
 	public static void main(String[] args) {
 		
