@@ -2,7 +2,7 @@ package com.part03;
 
 import java.util.Scanner;
 
-public class Attackrange {
+public class AttackrangeRe {
 
 	public static void main(String[] args) {
 		/*
@@ -29,20 +29,36 @@ public class Attackrange {
 		int x = sc.nextInt();			// 행
 		int y = sc.nextInt();			// 열
 		int ran = sc.nextInt();			// 사거리
+
+		int arr[][] = new int[N+1][N+1];	// 이거 까먹지 말자 2차원 배열 0으로 채울꺼면 배열의 크기를 지정하고 초기화만 해줘도 기본값0으로 초기화됨	
 		
-		int arr[][] = new int[N][N];
-		
-		for(int i=0; i<N; i++) {
-			for(int j=0; j<N; j++) {
+		// 배열값 초기화	이거 까먹지말자
+		/*for(int i=1; i<=N; i++) {
+			for(int j=1; j<=N; j++) {
 				arr[i][j] = 0;
 			}
+		}*/
+		
+		// x,y좌표 기준으로 거리만큼의 숫자 넣기
+		while(ran>0) {
+			for(int i=1; i<=N; i++) {
+				for(int j=1; j<=N; j++) {
+					if(Math.abs(i-x)+Math.abs(j-y) == ran) { 
+						arr[i][j]=ran;
+					}
+				}
+			}
+			ran--;
 		}
 		
-		arr[x][y] = 'x';
 		
-		for(int i=0; i<N; i++) {
-			for(int j=0; j<N; j++) {
-				System.out.print(arr[i][j]+' ');
+		for(int i=1;i<=N; i++) {
+			for(int j=1;j<=N;j++) {
+				if(i==x && j==y) {
+					System.out.print("x ");
+					continue;
+				}
+				System.out.printf("%d ", arr[i][j]);
 			}
 			System.out.println();
 		}
