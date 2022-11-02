@@ -34,8 +34,29 @@ public class ModeMean {
 		
 		int avg = sum/10;		//평균값
 		
+		int maxV = 0;	// 최빈값 담을 변수
+		int maxC = -1;  // 최빈값의 빈도수를 담을 변수
+		int cnt = 0;	// 빈도수를 셀 변수
 		
+		for(int i=0; i<arr.length; i++) {
+			if(maxV == arr[i]) continue;		// 만약 최빈값을 또 비교하려고 하면 그냥 다음 값으로 넘어가기
+			
+			for(int j=0; j<arr.length; j++) {
+				if(arr[i]==arr[j]) cnt++;
+			}
+			
+			if(cnt > maxC) {
+				maxC = cnt;
+				maxV = arr[i];
+			}else if(cnt == maxC && maxV > arr[i]) {
+				maxV = arr[i];
+			}
+			
+			cnt = 0;		// 디버깅의 중요성!!!!!
+		}
 		
+		System.out.println(avg);
+		System.out.println(maxV);
 	}
 	
 }

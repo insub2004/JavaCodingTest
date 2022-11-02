@@ -2,7 +2,7 @@ package com.part03;
 
 import java.util.Scanner;
 
-public class offsetRe {
+public class Offset {
 
 	public static void main(String[] args){
 		

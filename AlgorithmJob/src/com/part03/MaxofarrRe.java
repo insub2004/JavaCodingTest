@@ -2,7 +2,7 @@ package com.part03;
 
 import java.util.Scanner;
 
-public class maxofarrRe {
+public class MaxofarrRe {
 
 	public static void main(String[] args) {
 		
