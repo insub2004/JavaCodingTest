@@ -1,9 +1,8 @@
-package com.part08;
+package com.recursion;
 
 import java.util.Scanner;
 
-public class TobinRe {
-
+public class Tobin01 {
 	/*
 	 * 문제
 	두 정수 n, k를 입력받아 k개의 1을 가진 n자리 이진 패턴을 출력하는 프로그램을 작성하세요.
@@ -28,39 +27,37 @@ public class TobinRe {
 	2 0
 	예제 출력
 	00
-	
 	 */
 	
+	public static int[] arr;
 	public static int n;
-	public static int[] result;
 	
 	public static void main(String[] args) {
-	
 		Scanner sc = new Scanner(System.in);
 		
-		n = sc.nextInt();
-		int k = sc.nextInt();
+		n = sc.nextInt();	// n개의 자리
+		int k = sc.nextInt();	// 1의 갯수
 		
-		result = new int[n];
+		arr = new int[n];	
 		
-		getResult(0,k);		//k만큼만 1을 표시해야하니깐
+		getResult(0,k);
 		
 	}
 
-	private static void getResult(int x,int k) {
+	private static void getResult(int x, int k) {
 		
 		if(k==0) {
 			for(int i=0; i<n; i++) {
-				System.out.print(result[i]);
+				System.out.print(arr[i]);
 			}
 			System.out.println();
-		} else {
-			for(int i=x; i<n; i++) {
-				result[i] = 1;
-				getResult(i+1, k-1);
-				result[i] = 0;
+		}
+		else {
+			for(int j=x;j<n;j++) {
+				arr[j] = 1;
+				getResult(j+1, k-1);
+				arr[j] = 0;
 			}
 		}
-		
 	}
 }
