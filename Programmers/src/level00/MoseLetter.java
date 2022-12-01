@@ -8,11 +8,9 @@ public class MoseLetter {
 		
 		String answer = "";
 		
-		String letter = ".--. -.-- - .... --- -.";
+		String letter = ".-";
 		
 		String []arrStr = letter.split(" ");
-		
-		System.out.println(Arrays.toString(arrStr));
 		
 		String []mose = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
 		
