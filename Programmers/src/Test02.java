@@ -14,5 +14,17 @@ public class Test02 {
 		
 		System.out.println(a==b);
 		System.out.println(a.equals(b));
+		int i=1;
+		int mul=1;
+		while(true) {
+			mul *= i;
+			if(mul==7) break;
+			else if(mul>7) {
+				i--;
+				break;
+			}
+			i++;
+		}
+		System.out.println(i);
 	}
 }
