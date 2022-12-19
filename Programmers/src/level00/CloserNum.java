@@ -10,8 +10,8 @@ public class CloserNum {
         int num = 100;
         for(int i=0; i < array.length; i++){
             if(Math.abs(n-array[i]) <= answer){
-                if(num > arr[i]){
-                  num = arr[i];  
+                if(num > array[i]){
+                  num = array[i];  
                 } 
             }
         }
