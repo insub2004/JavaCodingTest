@@ -9,7 +9,14 @@ public class FindNum02 {
         int answer = 0;
         
         String str = my_string.replaceAll("[a-zA-Z]", "0");
-        
+        System.out.println(str);
+        int idx = 0;
+        while(idx > str.length()) {
+        	char ch = str.charAt(idx);
+        	if(ch!='0') {
+        		
+        	}
+        }
         return answer;
     }
 }
