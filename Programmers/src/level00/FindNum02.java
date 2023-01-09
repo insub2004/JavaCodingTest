@@ -1,5 +1,7 @@
 package level00;
 
+import java.util.Arrays;
+
 public class FindNum02 {
 
 	public static void main(String[] args) {
@@ -8,15 +10,17 @@ public class FindNum02 {
 	public static int solution(String my_string) {
         int answer = 0;
         
-        String str = my_string.replaceAll("[a-zA-Z]", "0");
+        String str = my_string.replaceAll("[a-zA-Z]", " ");
         System.out.println(str);
-        int idx = 0;
-        while(idx > str.length()) {
-        	char ch = str.charAt(idx);
-        	if(ch!='0') {
-        		
+        String[] strArr = str.split(" ");
+        System.out.println(Arrays.toString(strArr));
+        for(int i=0; i<strArr.length; i++) {
+        	if(!(strArr[i].equals(""))) {
+            	answer += Integer.valueOf(strArr[i]);
         	}
         }
+        System.out.println(answer);
+        
         return answer;
     }
 }
