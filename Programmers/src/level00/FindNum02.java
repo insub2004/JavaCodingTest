@@ -11,9 +11,9 @@ public class FindNum02 {
         int answer = 0;
         
         String str = my_string.replaceAll("[a-zA-Z]", " ");
-        System.out.println(str);
+        //System.out.println(str);
         String[] strArr = str.split(" ");
-        System.out.println(Arrays.toString(strArr));
+        //System.out.println(Arrays.toString(strArr));
         for(int i=0; i<strArr.length; i++) {
         	if(!(strArr[i].equals(""))) {
             	answer += Integer.valueOf(strArr[i]);
