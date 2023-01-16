@@ -9,7 +9,6 @@ public class CalString {
 	public static int solution(String my_string) {
 		String[] strArr = my_string.split(" ");
 		int answer = Integer.parseInt(strArr[0]);
-		System.out.println(Arrays.toString(strArr));
 		for(int i=1; i<strArr.length; i++) {
 			switch(strArr[i]) {
 			 	case"+": 
