@@ -8,15 +8,13 @@ public class Chicken {
 	
 	public static int solution(int chicken) {
         int answer = 0;
-        int res = 0;
-        while(chicken>0){
-            answer += chicken/10;
-            res += chicken%10;
-            if(res == 10) {
-            	answer++;
-            	res=0;
-            }
-            chicken/=10;
+        int coupon = 0;
+        
+        while(chicken>9) {
+        	answer += chicken/10;
+        	coupon += chicken%10;
+        	chicken = (chicken/10)+coupon;
+        	coupon = 0;
         }
         
         return answer;
