@@ -2,7 +2,7 @@ package level00;
 
 public class FiniteDecimal {
 	public static void main(String[] args) {
-		System.out.println(solution(3500,500));
+		System.out.println(solution(12,21));
 	}
 	
 	public static int solution(int a, int b) {
@@ -18,10 +18,12 @@ public class FiniteDecimal {
 		
 		while(b!=0) {
 			r = a%b;
+			System.out.println(r);
 			if(r==0) break;
 			a = b;
 			b = r;
 		}
+		System.out.println("b:"+b);
 		return b;
 	}
 }

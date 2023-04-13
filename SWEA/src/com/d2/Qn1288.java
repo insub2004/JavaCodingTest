@@ -12,7 +12,8 @@ public class Qn1288 {
 
 		for(int test_case = 1; test_case <= T; test_case++)
 		{
-			
+			int total = sc.nextInt();
+			System.out.printf("#%d %d\n", test_case, total/3);
 		}
 	}
 }
