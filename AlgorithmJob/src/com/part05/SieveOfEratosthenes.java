@@ -10,7 +10,7 @@ public class SieveOfEratosthenes {
 	
 	public static void primeNumberSieve(){
 		
-		for(int i=2; i<=MAX; i++) {			// 전체에 숫자 입력
+		for(int i=2; i<=MAX; i++) {			// 전체에 숫자 입력, 0과 1은 제외니깐
 			a[i] = i;
 		}
 		
@@ -18,7 +18,7 @@ public class SieveOfEratosthenes {
 			if(a[i]==0)continue;				// 만약 만난 숫자가 0이면 넘어가고 => i(자기자신 제외)의 배수들이 0임
 			for(int j=i+i; j<=MAX; j += i) {	// for(자신은 제외하고 다음 배수부터 시작; 마지막MAX값까지; 다음 배수 숫자로 이동)
 				a[j] = 0;						// i:2일경우 (4부터;끝까지;다음6으로)
-			}			
+			}
 		}
 		
 		for(int i=2; i<=MAX; i++) {
