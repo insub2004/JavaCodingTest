@@ -29,14 +29,15 @@ public class Qn0801 {
 		}
 		//두 번재로 작은 자연수
 		int min02 = 10000000;
+		int idx02 = 0;
 		for(int i=0; i<arr.length; i++) {
 			if(i==idx) continue;
 			if(min02>arr[i]) {
 				min02 = arr[i];
-				idx = i;
+				idx02 = i;
 			}
 		}
 		System.out.println(min02);
-		System.out.println(idx+1);
+		System.out.println(idx02+1);
 	}
 }
