@@ -34,7 +34,7 @@ public class Rook {
 				arr[i][j] = sc.nextInt();
 				
 				if(arr[i][j]==2) {
-					rookY[rookCnt] = i;		// 행이 y
+					rookY[rookCnt] = i;		// 행이 y	
 					rookX[rookCnt] = j;		// 열이 x
 					
 					rookCnt++;	// 룩이 2개 들어올 경우 대비
