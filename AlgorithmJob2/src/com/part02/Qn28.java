@@ -14,7 +14,7 @@ public class Qn28 {
 		int y=sc.nextInt();
 		int r=sc.nextInt();
 		
-		int[][] arr = new int[10][10];
+		int[][] arr = new int[105][105];
 		int dist = 0;
 		
 		for(int i=0;i<=n;i++) {
