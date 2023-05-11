@@ -42,26 +42,28 @@ public class Qn29 {
 				}
 				if(sum==0) cnt++;
 				sum=0;
-			}else if(x+y==4) {			//오른쪽에서 왼쪽 아래 대각선 방향
+			}
+			if(x+y==4) {			//오른쪽에서 왼쪽 아래 대각선 방향
 				if(arr[0][4] + 
 				   arr[1][3] +
 				   arr[2][2] +
 				   arr[3][1] +
 				   arr[4][0] == 0) cnt++;
-			}else {						//대각선을 제외한 행,열 방향의 합들
-				//행 조회
-				for(int i=0; i<5; i++) {
-					sum += arr[i][y];
-				}
-				if(sum==0) cnt++;
-				sum=0;
-				//열 조회
-				for(int j=0; j<5; j++) {
-					sum += arr[x][j];
-				}
-				if(sum==0) cnt++;
-				sum=0;
 			}
+			//대각선을 제외한 행,열 방향의 합들
+			//행 조회
+			for(int i=0; i<5; i++) {
+				sum += arr[i][y];
+			}
+			if(sum==0) cnt++;
+			sum=0;
+			//열 조회
+			for(int j=0; j<5; j++) {
+				sum += arr[x][j];
+			}
+			if(sum==0) cnt++;
+			sum=0;
+			
 			
 			ans++;	// 입력한 횟수 카운팅
 			
