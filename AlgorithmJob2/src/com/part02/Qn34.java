@@ -1,11 +1,14 @@
-package com.d2;
+package com.part02;
 
 import java.util.Scanner;
 
-public class Sheet {
-
+public class Qn34 {
+	
+	//싸피 오픈채팅 방 비밀번호 문제...
+	//문자열 n개를 A와 B의 조합, 단 B는 딱 두 개 있음 
+	//사전식 배열로 k번째 문자열이 있을 때
+	//두 번째 B위치를 이진수로 출력하시오
 	public static void main(String[] args) {
-		
 		Scanner sc = new Scanner(System.in);
 		
 		int n = sc.nextInt();
@@ -53,5 +56,4 @@ public class Sheet {
 
 		System.out.println(ans);
 	}
-	
 }
